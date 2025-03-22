@@ -2,9 +2,11 @@ FROM node:latest
 
 WORKDIR /home/todo/app
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install
+
+COPY . .
 
 EXPOSE 3000
 
